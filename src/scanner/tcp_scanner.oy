@@ -1,0 +1,25 @@
+"""
+TCP Port Scanner
+"""
+
+import socket
+
+def scan_port(host, port):
+
+    print(f"\nScanning {host}:{port}\n")
+
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+    sock.settimeout(1)
+
+    result = sock.connect_ex((host, port))
+
+    if result == 0:
+
+        print(f"[OPEN] Port {port}")
+
+    else:
+
+        print(f"[CLOSED] Port {port}")
+
+    sock.close()
