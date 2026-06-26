@@ -1,0 +1,13 @@
+"""
+Application Settings
+"""
+
+DEFAULT_TIMEOUT = 1
+
+MAX_THREADS = 100
+
+DEFAULT_START_PORT = 1
+
+DEFAULT_END_PORT = 1024
+
+REPORT_DIRECTORY = "reports"
